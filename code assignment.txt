@@ -245,8 +245,7 @@ public class Main{
 	    return ans;
 	}
 }
-
-13) //Define two methods to print the maximum and the minimum number respectively among three numbers entered by the user.
+13)//Define two methods to print the maximum and the minimum number respectively among three numbers entered by the user.
 
 import java.util.Scanner;
 class Main {
