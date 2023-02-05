@@ -1,0 +1,302 @@
+1)Fibonacci number
+
+n=int(input("Enter a Number\n"))
+def Fuct(n):
+    if n<0:
+        print("incorect input")
+    elif n==0:
+        return 0
+    elif n==1 or n==2:
+        return 1
+    else:
+        return Fuct(n-1)+Fuct(n-2)
+
+
+if n<0:
+    print("Incorrect no")
+else:
+    for i in range(n):
+        print(Fuct(i))
+        
+2) Sum of number in list
+
+lst=[12,13,45]
+n_lst=[]
+for i in lst:
+    sum=0
+    for n in str(i):
+        sum+=int(n)
+    n_lst.append(sum)
+print("Original list",lst)
+print(" Sum of Number  in lst",str(n_lst))
+
+3) Count positive and negative in list
+
+l=[1,-2,-3, 4 ,5]
+pos=0
+neg=0
+for i in l:
+    if i>0:
+        pos=pos+1
+    else:
+        neg=neg+1
+print("No Of Positive no is",pos)
+print("No Of Negative no is",neg)
+
+3) Marks of Student stored in sorted manner
+
+a=[]
+for i in range(1,7):
+    if i<=6:
+        
+        mks=input("Marks of Student" + str(i) +":")
+        
+        a.append(mks)
+        a.sort()
+print(a)
+
+4) Dictionary entry and choice preference
+
+names={}
+store=[]
+language=[]
+a=4
+for i in range(a):
+    if i<=4:
+        
+        user_name=input("Enter Your name:")
+        store.append(user_name)
+        lang=input("Enter your favourite Language: ")
+        language.append(lang)
+        num=store[i]
+        names[num]=language[i]
+print(names)
+
+5) Sum of n natural no
+
+a=int(input("Enter a no: "))
+
+if a<1:
+    print("Enter no greater than 1")
+else:
+    temp=0
+    while(a>0):
+        temp=temp+a
+        a=a-1
+print(temp)
+
+6)Guess Number game with limited attempts
+
+n=17
+print("YOU HAVE ONLY 5 GUESS ATTEMPTS")
+guess=1
+while(guess<=5):
+    user=int(input("Enter a no\n"))
+    if user>n:
+        print("Your number is greater than actual no" )
+    elif user<n:
+        print("Your number is smaller than actual no" )
+    else:
+        print("Congrats you chose right number, You won!")
+        print("You found the number at " + str(guess) + " Attempt")
+        break
+
+    print(5-int(guess), "Attempt left")
+    guess=guess+1
+if guess>5:
+    print("Game over")
+
+7) Pattern printing
+*/    ****
+      ****
+      ****
+      
+ a="*"
+for j in range(4):
+    
+    for i in range(4):
+        print(a, end=" ")
+    print()   
+
+8) Asc Pattern
+    *
+    **
+    ***
+    ****
+    
+for i in range(4):
+    for j in range(i+1):
+        print("*",end="")
+    print()
+
+9)Calculate multiplication and sum of 2 No Given two integer numbers return their product only if the product is equal to or lower than 1000, else return their sum.
+
+def fuct(a,b):
+    if a*b<=1000:
+        return a*b
+    else:
+        return a+b
+
+a=40
+b=30
+print(fuct(a,b))
+
+10)Print the sum of the current number and the previous number
+
+p=0
+for i in range(10):
+    c=i
+    s=c+p
+    print("current no ",c,"previous no",p,"sum",s)
+    p=c
+
+11)Check if the first and last number of a list is the same
+
+lst1=[1,2,3,4,5,6,1]
+lst2=[1,2,6,5,4,8,9]
+
+# can also use 6 as index but for safer we use -1 bcz it always starts at -1 i.e reverse side
+def fuct1(lst1):
+    if lst1[0]==lst1[-1]:
+        print(True)
+    else:
+        print(False)
+ 
+def fuct2(lst2):
+    if lst2[0]==lst2[-1]:
+        print(True)
+    else:
+        print(False)
+a=fuct1(lst1)
+b=fuct2(lst2)
+
+12) Number Pattern
+     1
+     22
+     333
+     4444
+     
+  for i in range(1,5):
+    for j in range(i):
+        print(i,end="")
+    print()
+    
+ 13)Palindrome for name and number
+
+user="Gaurav"
+b=user.lower()
+a=b
+rev=a[::-1]
+
+
+if a==rev:
+    print("Palindrome")
+else:
+    print("Not palindrome")
+
+##########################
+user=input("No\n")
+
+a=user
+
+rev=a[::-1]
+
+
+if a==rev:
+    print("Palindrome")
+        
+else:
+    print("Not palindrome")
+    
+14)Search index from array of any number in array by getting i/p
+
+from array import*
+
+arr=array('i',[])
+user=int(input("Enter length of aray: "))
+for i in range(user):
+    x=int(input("Enter values"))
+    arr.append(x)
+print(arr)
+k=0
+s=int(input("Enter value search: "))
+for i in arr:
+    if i==s:
+        print(k)
+        break
+    k=k+1
+    
+ 15)Fibonacci no using genrator
+
+def gen():
+    a,b =0,1
+    while True:
+        yield a
+        a,b=b,a+b
+        
+f=gen()
+print(next(f))
+print(next(f))
+print(next(f))
+print(next(f))
+print(next(f))
+print(next(f))
+
+16) Sort without Sorting
+
+l=[2,1,5,3,9,4,8,7]
+for i in range(len(l)):
+    for j in range(i+1,len(l)):
+        if l[i]>l[j]:
+            l[i],l[j]=l[j],l[i]
+            
+print(l)
+
+17) Two Sum Leetcode
+
+l=[1,2,5,6,9,4]
+sum=10
+for i in range(len(l)):
+    for j in range(i+1,len(l)):
+        if l[i]+l[j]==sum:
+            print(l[i],l[j])
+            print(i,j)
+            
+18) Armstrong Number
+
+#n = int(input("Enter a number: "))     // Can get i/p from user too
+n=153
+s =0
+t = n
+while t > 0:
+   dg = t % 10
+   s =s+ dg ** 3
+   t=t// 10
+if n == s:
+   print(n,"is an Armstrong number")
+else:
+   print(n,"is not an Armstrong number")
+   
+
+19) Using Binary Search Locate Card and position
+
+def locate(cards,query):
+    lo , hi=0,len(cards)-1
+    
+    while lo<=hi:
+        mid=(lo+hi)//2
+        mid_no=cards[mid]
+        
+        print(lo,hi,mid_no)
+    
+        if mid_no==query:
+            return mid
+        elif mid_no<query:
+            hi=mid-1
+        elif mid_no>query:
+            lo=mid+1
+    return -1
+    
+cards=[9,8,7,5,4,2,1]
+query=7    
+print(locate(cards,query))
