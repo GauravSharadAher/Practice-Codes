@@ -1,0 +1,247 @@
+1)CODE ON EVEN ODD.
+
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args) {
+        Scanner in=new Scanner(System.in);
+        System.out.println("Enter A number: ");
+        int num=in.nextInt();
+        if(num%2==0){
+        System.out.print("Even Number");
+        }else{
+        System.out.print("Odd Number");
+        }
+    }
+    
+}
+
+2)GREETING TO USER VIA INPUT
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner in=new Scanner(System.in);
+        System.out.println("Enter Your Name: ");
+        String name=in.next();
+        System.out.println("Hello " + name + " Have a Nice Day!!");
+    }
+}
+
+3)CALCULATE SIMPLE INTERREST
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner in=new Scanner(System.in);
+        System.out.print("Enter Pricipal Amount:");
+        int pr=in.nextInt();
+        System.out.print("Enter Time in yrs: ");
+        int time=in.nextInt();
+        System.out.print("Enter Rate of Interest: ");
+        int r=in.nextInt();
+        int Si=(pr*r*time);
+        int f=Si/100;
+        int amt=pr+f;
+        System.out.println("Simple Interest is: " + f +"Rs." );
+        System.out.println("Total Amount is:  " + amt +"Rs.");
+    
+    }
+}
+
+4)CALCULATE NUMBER OUTPUT GIVEN BY OPERATOR INPUT
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner in=new Scanner(System.in);
+        System.out.print("Enter 1st number: ");
+        int num1=in.nextInt();
+        System.out.print("Enter 2nd number: ");
+        int num2=in.nextInt();
+        System.out.print("Enter A operation: ");
+        float ans=div(num1,num2);
+       
+        
+        char op=in.next().charAt(0);
+        if(op =='+'){
+            System.out.print(num1 + " + " + num2 + " Gives: " + (num1+num2));
+        }
+        else if(op=='-'){
+            System.out.print(num1 + " - " + num2 + " Gives: " + (num1-num2));
+        }
+        else if(op=='*'){
+            System.out.print(num1 + " * " + num2 + " Gives: " + (num1*num2));
+        }
+        else if(op=='/'){
+            System.out.print(num1 + " /" + num2 + " Gives:" + (ans));
+        }
+        else{
+            System.out.println("Wrong operator, Please Renter");
+        }
+    
+    }
+    static float div(float num1,float num2){
+        return num1/num2;
+    }
+}
+
+5)CALCULATE MAXIMUM NUMBER BETWEEN 2 INPUTS
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner in=new Scanner(System.in);
+        System.out.print("Enter 1st Number : ");
+        int num1=in.nextInt();
+        System.out.print("Enter 2nd Number : ");
+        int num2=in.nextInt();
+        int ans=maxno(num1,num2);
+        System.out.println("Maximum no is " + ans);
+    }
+    static int maxno(int num1,int num2){
+        int temp=num1;
+        if(num2>temp){
+            return num2;
+        }else{
+            return num1;
+        }
+    }
+}
+
+6)RUPEE INTO USD DOLLAR
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner in=new Scanner(System.in);
+        System.out.print("Enter a Currency In Rs :");
+        int rs=in.nextInt();
+        double dol=rs*0.012;
+        System.out.println(rs + " Rs in USD = " + dol +"$");
+        
+       
+    }
+}
+
+7)FIBONACCI NO
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner in=new Scanner(System.in);
+        System.out.print("Enter A number: ");
+        int n=in.nextInt();
+        int a=0;
+        int b=1;
+        int count=2;
+        while(count<=n){
+            int temp=b;
+            b=b+a;
+            a=temp;
+            count++;
+        }
+        System.out.print(" " + b);
+        
+    }
+}
+
+8)PALINDROME STRING
+
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args) {
+        Scanner in=new Scanner(System.in);
+        System.out.print("Enter A name: ");
+        String str=in.nextLine().trim();
+        String reversestr=""; // We create a empty string
+        int strlength=str.length();//then create a var of type int for string length eg="word" having 4 lenght so value gets stored
+        
+        for(int i=(strlength - 1);i >=0 ;i--){   //then we deduce 1 to fetch index and goes reverse and add in empty var useing char at
+            reversestr=reversestr+str.charAt(i);
+        }
+        if(str.toLowerCase().equals(reversestr.toLowerCase())){ //we lower the input str and empty string and eqauls them to check
+            System.out.print("Palindrome");
+        }else{
+            System.out.print("Not Palindrome");
+        }
+       
+    }
+  
+        
+    
+}
+
+9)palindrome no
+
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner in=new Scanner(System.in);
+        System.out.println("Enter a nO:");
+        int num=in.nextInt();
+        int temp=num;
+        int ans=0;
+        while(num>0){
+            int rem=num%10;
+            num=num/10;
+            ans=(ans*10)+rem;
+            
+        }
+        
+        
+        System.out.println(temp);
+        if(ans==temp){
+            System.out.println("Palindrome");
+        }else{
+            System.out.println("not palindrome");
+        }
+    
+    }
+   
+}
+
+10) Area OF Circle:
+
+import java.util.Scanner;
+public class Main{
+	public static void main(String[] args) {
+		Scanner in=new Scanner(System.in);
+		System.out.println("Enter Radius of Circle: ");
+		int r=in.nextInt();
+		double ans=3.14*(r*r);
+		System.out.println("Area of circle: " + ans);
+	}
+}
+
+11)Area Of triangle
+
+import java.util.Scanner;
+public class Main{
+	public static void main(String[] args) {
+	    int area=tri();
+	    System.out.println("Area of triangle: " + area);
+	}
+	static int tri(){
+	    Scanner in=new Scanner(System.in);
+		System.out.print("Enter Height: ");
+	    int h=in.nextInt();
+	    System.out.print("Enter Base: ");
+	    int b=in.nextInt();
+	    int ans=(h*b)/2;
+	    return ans;
+	}
+}
+
+12)Area of rectangle
+
+import java.util.Scanner;
+public class Main{
+	public static void main(String[] args) {
+	    int area=rect();
+	    System.out.println("Area of Rectangle: " + area);
+	}
+	static int rect(){
+	    Scanner in=new Scanner(System.in);
+		System.out.print("Enter Lenght: ");
+	    int l=in.nextInt();
+	    System.out.print("Enter Breath: ");
+	    int b=in.nextInt();
+	    int ans=(l*b);
+	    return ans;
+	}
+}   
